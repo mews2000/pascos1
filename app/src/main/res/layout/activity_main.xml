@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context="com.example.pascos.MainActivity">
 
     <ProgressBar
         android:id="@+id/envi"
@@ -127,51 +126,104 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="340dp"
-        android:layout_height="159dp"
-        android:layout_marginRight="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+
+        android:layout_marginRight="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/thermo" />
 
-    <ImageButton
-        android:id="@+id/btnConnect"
-        android:layout_width="62dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="4dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/btn" />
-
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="274dp"
-        android:layout_height="51dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="55dp"
+        android:layout_width="332dp"
+        android:layout_height="23dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="78dp"
         android:indeterminate="false"
-
-
         android:max="100"
-        android:progress="20"
+        android:progress="34"
+        android:progressDrawable="@drawable/protem"
+        android:progressTint="#CB0E10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
-        android:id="@+id/amm"
-        android:layout_width="119dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="388dp"
-        android:text=""
-        android:textColor="#76E2BF"
-        android:textSize="25sp"
+        android:id="@+id/thermotext"
+        android:layout_width="54dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="73dp"
+        android:gravity="center"
+        android:text="30*C"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textAlignment="center"/>
+        app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/thermot"
+        android:layout_width="169dp"
+        android:layout_height="60dp"
+
+        android:layout_marginLeft="70dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#E55C02"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/humit"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/humit"
+        android:layout_width="169dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="70dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#9A9AFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/dirtt"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/dirtt"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#025A02"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnb"
+        android:layout_width="79dp"
+        android:layout_height="66dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btnb" />
+
+    <ImageView
+        android:id="@+id/place"
+        android:layout_width="79dp"
+        android:layout_height="74dp"
+        app:srcCompat="@drawable/gps"
+        tools:layout_editor_absoluteX="316dp"
+        tools:layout_editor_absoluteY="97dp"
+        android:clickable="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnb"
+        />
 
 
 </android.support.constraint.ConstraintLayout>
